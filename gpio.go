@@ -50,8 +50,8 @@ func (pin *Pin) Export() error {
 	// export
 	err := ioutil.WriteFile(export, []byte(strconv.Itoa(pin.Port)), syscall.O_WRONLY)
 	if nil != err {
-		_ := pin.UnExport()
-		err := ioutil.WriteFile(export, []byte(strconv.Itoa(pin.Port)), syscall.O_WRONLY)
+		_ = pin.UnExport()
+		err = ioutil.WriteFile(export, []byte(strconv.Itoa(pin.Port)), syscall.O_WRONLY)
 		if nil != err {
 			return err
 		}
