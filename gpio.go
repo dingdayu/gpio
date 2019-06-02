@@ -41,6 +41,7 @@ type Pin struct {
 	path      string
 }
 
+// 创建一个引脚: 端口,方向
 func NewPin(port int, d string) *Pin {
 	return &Pin{Port: port, Direction: d}
 }
